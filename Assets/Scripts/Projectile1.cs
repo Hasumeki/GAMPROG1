@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Projectile1 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Rigidbody2D rb;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector3(15, 5, 0);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+      
     }
 }
