@@ -21,13 +21,17 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-            takeDamage(25f);
+       if(currentHealth < 1)
+        {
+            this.gameObject.SetActive(false);
+        }
+            
     }
 
-    void takeDamage(float Damage)
+    public void takeDamage(float Damage)
     {
         currentHealth = currentHealth - Damage;
         slider.value = currentHealth;
     }
+  
 }
