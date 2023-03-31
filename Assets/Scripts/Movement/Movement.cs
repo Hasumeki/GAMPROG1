@@ -59,10 +59,6 @@ public class Movement : MonoBehaviour
             horizontal = 1.0f;
         else
             horizontal = 0.0f;
-        //god has forsaken me and its all your fault for wanting a local 2P game 
-        //using input getaxisraw will take inputs from both WASD and arrow keys so I am forced to use input getkey
-        //why did you not listen to me
-        //removed A/D inputs from the unity input manager for this
-
+       
     }
 }

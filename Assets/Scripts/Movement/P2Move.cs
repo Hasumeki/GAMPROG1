@@ -16,6 +16,7 @@ public class P2Move : MonoBehaviour
 
     void Update()
     {
+        ADMovement();
         horizontal = Input.GetAxisRaw("Horizontal");
         //I have removed the A/D inputs in the unity input manager
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
@@ -50,6 +51,16 @@ public class P2Move : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+    private void ADMovement()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+            horizontal = -1.0f;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            horizontal = 1.0f;
+        else
+            horizontal = 0.0f;
+
     }
 }
 //KeyCode.UpArrow
